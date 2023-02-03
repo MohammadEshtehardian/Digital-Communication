@@ -1,0 +1,10 @@
+%clc; clear; close all;
+%[x, fs] = audioread('input.wav');
+%x = x(:, 1);
+%[x0, x] = ZeroRemover(x);
+[a, y_bin] = BitReducer(x, 7);
+z = QPSKMod(y_bin, 1);
+z = Channel(z, 0.1);
+y = QPSKDemod(z);
+w = Bits2Dec(y, 7);
+audiowrite('output.wav', w, fs);
