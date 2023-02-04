@@ -1,4 +1,4 @@
-function [y] = QPSKDemod(x)
+function [y] = QPSKDemod(x, remove)
 
 % This function demodulates an input signal x(t)
 
@@ -15,4 +15,10 @@ for i=1:N
     else
         y(2*i-1:2*i) = '10';
     end
+end
+
+if remove == 1
+    y = y(1:2*N-1);
+end
+
 end
