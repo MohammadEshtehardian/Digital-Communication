@@ -1,13 +1,18 @@
+%% QPSK Simulation
+
 clc; clear; close all;
-[x, fs] = audioread('input.wav');
-x = x(:, 1);
-[x0, x] = ZeroRemover(x);
-[a, y_bin] = BitReducer(x, 7);
-encData = BCH7Encoder(y_bin);
-z = QPSKMod(encData, 1);
-z = Channel(z, 0.1);
-y = QPSKDemod(z, 1);
-decData = BCH7Decoder(y);
-biterr(y_bin=='1', decData(1:length(y_bin))=='1')/length(y_bin)
-w = Bits2Dec(decData, 7);
-audiowrite('output.wav', w, fs);
+
+% parameters
+input = 'input.wav'; % input file
+output = 'output.wav'; % output file
+n = 7; % number of MSBs we want
+coding = 'None'; % coding type
+EbN0 = [0, 5, 10, 15]; % Eb/N0 values in dB
+Eb = 1; % energy per bit
+phase = 1; % effect of phase deviation
+
+% simulation
+for ebn0=EbN0
+    N0 = Eb / 10^(ebn0/10);
+    QPSKSimulator(input, output, phase, coding, n, Eb, N0);
+end

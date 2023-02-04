@@ -14,4 +14,5 @@ decData = decode(data,n,k,'cyclic/binary',genpoly,trt);
 y = num2str(decData);
 y = y(~isspace(y));
 
+
 end

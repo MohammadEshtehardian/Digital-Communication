@@ -2,6 +2,7 @@ function [y] = BCH11Encoder(x)
 
 % This function implements bch(15, 11) encoder
 
+% adding zeros to the data
 data = x=='1'; % convert string to array
 n = 15; % length of code
 k = 11; % length of data
