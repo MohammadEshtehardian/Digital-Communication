@@ -2,7 +2,7 @@ function [y] = QPSKMod(x, Eb)
 
 % This function get a series of bits and modulate it using QPSK
 
-A = sqrt(2*Eb); % domain of the signal
+A = sqrt(Eb); % domain of the signal
 N = length(x); % length of the input
 % make lentgh of the input even
 if mod(N, 2) == 1

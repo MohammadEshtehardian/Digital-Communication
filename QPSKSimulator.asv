@@ -28,10 +28,13 @@ end
 qpsk_mod = QPSKMod(encData, Eb);
 
 % passing through the channel
+dmin = 1;
 if isequal(coding, 'BCH(15,11)')
     N0 = N0 * 15 / 11;
+    dmin = 3;
 elseif isequal(coding, 'BCH(15,7)')
     N0 = N0 * 15 / 7;
+    dmin = 5;
 end
 channel_out = Channel(qpsk_mod, N0, phase);
 
@@ -54,8 +57,8 @@ decData = decData(1:length(bits)); % remove redundant bits
 
 % finding BER and print it
 bit_error = biterr(bits=='1', decData=='1')/length(bits) * 100;
-error_theory = (1 - (1 - qfunc(sqrt(2*Eb/N0)))^2)/2;
-fprintf('Bit Error Rate for %s with Theory is %0.6f%%\n', coding, error_theory*100);
+error_theory = 1 - (1 - )
+fprintf('Bit Error Rate for %s with Theory is %0.6f%%\n', coding, qfunc(sqrt(2*dmin*Eb/N0))*100);
 fprintf('Bit Error Rate for %s is %0.6f%%\n', coding, bit_error);
 disp('--------------');
 
