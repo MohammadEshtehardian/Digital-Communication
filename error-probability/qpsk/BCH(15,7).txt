@@ -1,0 +1,12 @@
+Bit Error Rate for BCH(15,7) with Theory is 4.444736%
+Bit Error Rate for BCH(15,7) with Practice is 31.781782%
+--------------
+Bit Error Rate for BCH(15,7) with Theory is 0.402401%
+Bit Error Rate for BCH(15,7) with Practice is 73.098218%
+--------------
+Bit Error Rate for BCH(15,7) with Theory is 0.000000%
+Bit Error Rate for BCH(15,7) with Practice is 73.635823%
+--------------
+Bit Error Rate for BCH(15,7) with Theory is 0.000000%
+Bit Error Rate for BCH(15,7) with Practice is 26.376152%
+--------------

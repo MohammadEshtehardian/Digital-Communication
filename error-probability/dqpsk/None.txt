@@ -1,0 +1,12 @@
+Bit Error Rate for None with Theory is 18.393972%
+Bit Error Rate for None with Practice is 16.398236%
+--------------
+Bit Error Rate for None with Theory is 2.116461%
+Bit Error Rate for None with Practice is 3.043041%
+--------------
+Bit Error Rate for None with Theory is 0.000000%
+Bit Error Rate for None with Practice is 0.000000%
+--------------
+Bit Error Rate for None with Theory is 0.000000%
+Bit Error Rate for None with Practice is 0.000000%
+--------------

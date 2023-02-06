@@ -1,0 +1,12 @@
+Bit Error Rate for BCH(15,11) with Theory is 3.371850%
+Bit Error Rate for BCH(15,11) with Practice is 18.527969%
+--------------
+Bit Error Rate for BCH(15,11) with Theory is 0.474869%
+Bit Error Rate for BCH(15,11) with Practice is 2.262965%
+--------------
+Bit Error Rate for BCH(15,11) with Theory is 0.000000%
+Bit Error Rate for BCH(15,11) with Practice is 0.000000%
+--------------
+Bit Error Rate for BCH(15,11) with Theory is 0.000000%
+Bit Error Rate for BCH(15,11) with Practice is 0.000000%
+--------------
