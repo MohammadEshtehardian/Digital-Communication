@@ -26,11 +26,11 @@ end
 dqpsk_mod = DQPSKMod(encData, Eb);
 
 % passing through the channel
-%if isequal(coding, 'BCH(15,11)')
-%    N0 = N0 * 15 / 11;
-%elseif isequal(coding, 'BCH(15,7)')
-%    N0 = N0 * 15 / 7;
-%end
+if isequal(coding, 'BCH(15,11)')
+    N0 = N0 * 15 / 11;
+elseif isequal(coding, 'BCH(15,7)')
+    N0 = N0 * 15 / 7;
+end
 channel_out = Channel(dqpsk_mod, N0, phase);
 
 % QPSK demodulation
@@ -51,16 +51,24 @@ end
 decData = decData(1:length(bits)); % remove redundant bits
 
 % finding BER and print it
-bit_error = biterr(bits=='1', decData=='1')/length(bits) * 100;
-error_theory = 0.5*exp(-Eb/N0);
+bit_error = biterr(bits=='1', decData=='1')/length(bits);
+error_theory = (1 - (1 - qfunc(sqrt(Eb/N0)))^2)/2;
 if isequal(coding, 'BCH(15,11)')
-    error_theory = nchoosek(15, 2)*error_theory^2*(1-error_theory)^13*2/15;
+    p = error_theory;
+    error_theory = 0;
+    for i=2:15
+        error_theory = error_theory + nchoosek(15, i)*p^i*(1-p)^(15-i)*i/15;
+    end
 elseif isequal(coding, 'BCH(15,7)')
-    error_theory = nchoosek(15, 3)*error_theory^3*(1-error_theory)^12*3/15;
+    p = error_theory;
+    error_theory = 0;
+    for i=3:15
+        error_theory = error_theory + nchoosek(15, i)*p^i*(1-p)^(15-i)*i/15;
+    end
 end
-error_theory = error_theory*100;
-fprintf(fileID, 'Bit Error Rate for %s with Theory is %0.6f%%\n', coding, error_theory);
-fprintf(fileID, 'Bit Error Rate for %s with Practice is %0.6f%%\n', coding, bit_error);
+fprintf(fileID, 'Value of SNR/bit is %0.3f dB\n', 10*log10(Eb/N0));
+fprintf(fileID, 'Bit Error Probability for %s with Theory is %d\n', coding, error_theory);
+fprintf(fileID, 'Bit Error Probability for %s with Practice is %d\n', coding, bit_error);
 fprintf(fileID, '--------------\n');
 fclose(fileID);
 

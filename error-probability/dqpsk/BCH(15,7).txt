@@ -1,12 +1,16 @@
-Bit Error Rate for BCH(15,7) with Theory is 4.940090%
-Bit Error Rate for BCH(15,7) with Practice is 14.674808%
+Value of SNR/bit is -3.310 dB
+Bit Error Probability for BCH(15,7) with Theory is 1.821242e-01
+Bit Error Probability for BCH(15,7) with Practice is 2.998650e-01
 --------------
-Bit Error Rate for BCH(15,7) with Theory is 0.066740%
-Bit Error Rate for BCH(15,7) with Practice is 0.549753%
+Value of SNR/bit is 1.690 dB
+Bit Error Probability for BCH(15,7) with Theory is 4.719051e-02
+Bit Error Probability for BCH(15,7) with Practice is 7.286455e-02
 --------------
-Bit Error Rate for BCH(15,7) with Theory is 0.000000%
-Bit Error Rate for BCH(15,7) with Practice is 0.000000%
+Value of SNR/bit is 6.690 dB
+Bit Error Probability for BCH(15,7) with Theory is 2.862053e-04
+Bit Error Probability for BCH(15,7) with Practice is 5.944780e-04
 --------------
-Bit Error Rate for BCH(15,7) with Theory is 0.000000%
-Bit Error Rate for BCH(15,7) with Practice is 0.000000%
+Value of SNR/bit is 11.690 dB
+Bit Error Probability for BCH(15,7) with Theory is 2.078242e-11
+Bit Error Probability for BCH(15,7) with Practice is 0
 --------------
