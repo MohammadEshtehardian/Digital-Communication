@@ -9,4 +9,3 @@ In this part of documentation I will explain all the functions of my simulator. 
 | -------- | ----------- | ------ | ------- |
 | ZeroRemover | Removing the begining of the signal which doesn't have useful information | <ul><li>$x[n]$ (samples of a signal)</li></ul>  | <ul><li>$y_0[n]$ (redundant samples of the begining)</li><li>$y[n]$ (samples of input with information)</li></ul>|
 | BitReducer | Reducing the number of bits in each sample of the signal | <ul><li>$x[n]$ (samples of a signal)</li><li>$n$ (number of bits for quantization)</li></ul> | <ul><li>$y[n]$ (new quantized signal)</li><li>$y_{bin}[n]$ (string of 0 and 1 which is bits of new quantized signal) </li></ul> |
-| 
