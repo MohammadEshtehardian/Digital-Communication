@@ -4,7 +4,8 @@ function [y0, y] = ZeroRemover(x)
 
 for i=1:length(x)
     % finding the index of the starting point
-    if abs(x(i)) >= 0.1*abs(max(x)) 
+    t = max([max(x), -min(x)]);
+    if abs(x(i)) >= 0.1*t
         y0 = x(1:i-1); % zeros of the begining
         y = x(i:end); % voice
         break

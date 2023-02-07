@@ -1,14 +1,14 @@
 Value of SNR/bit is -3.310 dB
 Bit Error Probability for BCH(15,7) with Theory is 1.821242e-01
-Bit Error Probability for BCH(15,7) with Practice is 2.998650e-01
+Bit Error Probability for BCH(15,7) with Practice is 2.996676e-01
 --------------
 Value of SNR/bit is 1.690 dB
 Bit Error Probability for BCH(15,7) with Theory is 4.719051e-02
-Bit Error Probability for BCH(15,7) with Practice is 7.286455e-02
+Bit Error Probability for BCH(15,7) with Practice is 7.277656e-02
 --------------
 Value of SNR/bit is 6.690 dB
 Bit Error Probability for BCH(15,7) with Theory is 2.862053e-04
-Bit Error Probability for BCH(15,7) with Practice is 5.944780e-04
+Bit Error Probability for BCH(15,7) with Practice is 5.953400e-04
 --------------
 Value of SNR/bit is 11.690 dB
 Bit Error Probability for BCH(15,7) with Theory is 2.078242e-11
